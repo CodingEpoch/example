@@ -19,6 +19,7 @@ import ExpandMore from "@material-ui/icons/ExpandMore";
 import Collapse from "@material-ui/core/Collapse";
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
+import TestingPage from "../../../pages/TestingEd/TestingEd";
 
 import {
   FaAddressCard,
@@ -169,6 +170,11 @@ const items = [
     name: "Contact",
     icon: <FaAddressCard size={22} />,
     link: "/about",
+  },
+  {
+    name: "Testing",
+    icon: <FaAddressCard size={22} />,
+    link: "/testing",
   },
   {
     name: "Demos",

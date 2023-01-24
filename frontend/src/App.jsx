@@ -15,6 +15,7 @@ import PricingOverview from "./components/Pricing/StandardPricing/Pricing";
 import HeroDemo from "./pages/Demos/Heroes/HeroesDemo";
 import FeatureDemo from "./pages/Demos/Features/FeaturesDemo";
 import DrawerBased from "./components/Navigation/DrawerBased/DrawerBased";
+import TestingPage from "./pages/TestingEd/TestingEd";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
 
         <Route path="/heroes" element={<HeroDemo />} />
         <Route path="/features" element={<FeatureDemo />} />
+        <Route path="/testing" element={<TestingPage />} />
       </Routes>
       <MuiFooter />
     </Router>

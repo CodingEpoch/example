@@ -42,10 +42,11 @@ const useStyles = makeStyles((theme) => ({
     height: 180,
     margin: "0px 0px 10px 0px",
     backgroundColor: "#212121",
+    
   },
   actionArea: {
     "&:hover": {
-      backgroundColor: "rgba(255, 255, 255, 0.1)",
+      opacity: '.8',
     },
   },
   actionAreaLink: {
@@ -170,15 +171,17 @@ export default function LatestNews() {
               to={`/articles/${article.id}`}
               className={classes.actionArea}
             >
-              <CardMedia
-                className={classes.media}
-                image={article.image}
-                title={article.title}
-              />
+              {" "}
               <CardContent className={classes.cardContent}>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant="h5" className={classes.title} component="h2">
                   {article.title}
                 </Typography>
+                <CardMedia
+                  className={classes.media}
+                  image={article.image}
+                  title={article.title}
+                />
+
                 <Typography variant="body2" component="p">
                   {article.preview}
                 </Typography>
