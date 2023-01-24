@@ -195,19 +195,22 @@ export default function BetterTestimonials() {
               className={classes.speechBubbles}
             >
               <SlideOnScroll direction="down">
-                <Testimonial>
-                  <TestimonialContent>
-                    <TestimonialHeading>
-                      {testimonial.heading}
-                    </TestimonialHeading>
-                    <TestimonialText>{testimonial.text}</TestimonialText>
-                  </TestimonialContent>
-                  <TestimonialAvatar
-                    src={testimonial.avatar.src}
-                    name={testimonial.avatar.name}
-                    title={testimonial.avatar.title}
-                  />
-                </Testimonial>
+                <Grid direction="row">
+                  <Testimonial>
+                    <TestimonialContent>
+                      <TestimonialHeading>
+                        {testimonial.heading}
+                      </TestimonialHeading>
+                      <TestimonialAvatar
+                      src={testimonial.avatar.src}
+                      name={testimonial.avatar.name}
+                      title={testimonial.avatar.title}
+                    />
+                      <TestimonialText>{testimonial.text}</TestimonialText>
+                    </TestimonialContent>
+                    
+                  </Testimonial>
+                </Grid>
               </SlideOnScroll>
             </Grid>
           ))}

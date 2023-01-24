@@ -44,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(4),
     padding: theme.spacing(3),
     boxShadow: theme.shadows[7],
-    transition: "box-shadow 0.3s ease-in-out",
     "&:hover": {
       transform: "scale(1.005)",
       boxShadow: theme.shadows[14],
@@ -121,6 +120,10 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       transform: "scale(1.02)",
     },
+  },
+  "@keyframes opacity": {
+    "0%": { opacity: "0.1" },
+    "100%": { opacity: "1" },
   },
 }));
 
@@ -217,6 +220,9 @@ export default function PricingOverview() {
       <div className={classes.pricingContainer}>
         {pricingData.map((plan, index) => (
           <Card className={classes.pricingCard} key={plan.title}>
+            <Typography className={classes.pricingTitle}>
+              <TypingEffect duration="0.2" text={plan.title}></TypingEffect>
+            </Typography>
             <CardContent>
               <CardMedia
                 className={classes.media}
@@ -225,14 +231,7 @@ export default function PricingOverview() {
                 justifyContent="center"
                 alignItems="center"
               />
-              <Typography className={classes.pricingTitle}>
-                <TypingEffect duration="0.2" text={plan.title}></TypingEffect>
-              </Typography>
-              <Grid container direction="row" align="center" justify="center">
-                <Typography className={classes.pricingPrice}>
-                  <div style={{ display: "flex" }}>${plan.price}/month</div>
-                </Typography>
-              </Grid>
+
               <List className={classes.pricingFeatures}>
                 {plan.features.map((feature) => (
                   <ListItem key={feature}>
@@ -241,6 +240,11 @@ export default function PricingOverview() {
                   </ListItem>
                 ))}
               </List>
+              <Grid container direction="row" align="center" justify="center">
+                <Typography className={classes.pricingPrice}>
+                  <div style={{ display: "flex" }}>${plan.price}/month</div>
+                </Typography>
+              </Grid>
               <Grid container spacing={3}>
                 <Grid item xs={6}>
                   <CustomButton

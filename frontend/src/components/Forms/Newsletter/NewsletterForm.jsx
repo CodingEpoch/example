@@ -51,12 +51,12 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: theme.spacing(2),
   },
   input: {
+    width: '65%',
     margin: theme.spacing(1),
     "& .MuiOutlinedInput-root": {
       "&.Mui-focused fieldset": {
@@ -79,7 +79,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   submit: {
-    margin: theme.spacing(3, 0, 2),
+    height: '50px',
+    width: '100px',
   },
   error: {
     color: theme.palette.error.main,
@@ -128,20 +129,9 @@ export default function BetterNewsletter() {
             notchedOutline
             placeholder="Your Email"
             required
-            fullWidth
             id="emailaddress"
             label="Email Address"
           />
-          <Grid container spacing={2}>
-            <Grid
-              item
-              xs={12}
-              style={{
-                display: "flex",
-                width: "100%",
-                justifyContent: "center",
-              }}
-            >
               <CustomButton
                 variant="contained"
                 color="primary"
@@ -152,8 +142,6 @@ export default function BetterNewsletter() {
               >
                 {state === "success" ? "Subscribed" : "Submit"}
               </CustomButton>
-            </Grid>
-          </Grid>
         </form>
         <Typography
           variant="body2"
