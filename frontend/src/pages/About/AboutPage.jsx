@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     backgroundColor: "white",
   },
+  mission: {
+    width: '80%',
+  }
 }));
 
 function AboutPage() {
@@ -42,7 +45,7 @@ function AboutPage() {
     <div className="landing-container">
       <div>
         <div className="">
-          <CompanyInfo />
+          <CompanyInfo className={classes.mission}/>
         </div>
         <div className="">
           <TeamMembers members={members} />
