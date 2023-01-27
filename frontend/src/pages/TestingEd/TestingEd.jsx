@@ -17,7 +17,10 @@ import {
   FaGithub,
   FaStackOverflow,
 } from "react-icons/fa";
+<<<<<<< HEAD
 import Questionnaire from "../../components/Questions/Questionnaire";
+=======
+>>>>>>> bc90422909a1de7f41dd2426812ce07d38c8a8e0
 
 const partners = [
   {
@@ -114,9 +117,12 @@ function TestingPage() {
       <div className="">
         <BetterNewsletter />
       </div>
+<<<<<<< HEAD
       <div>
         <Questionnaire />
       </div>
+=======
+>>>>>>> bc90422909a1de7f41dd2426812ce07d38c8a8e0
     </div>
   );
 }
