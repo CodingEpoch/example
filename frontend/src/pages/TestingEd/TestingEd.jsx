@@ -17,6 +17,7 @@ import {
   FaGithub,
   FaStackOverflow,
 } from "react-icons/fa";
+import Questionnaire from "../../components/Questions/Questionnaire";
 
 const partners = [
   {
@@ -112,6 +113,9 @@ function TestingPage() {
       </div>
       <div className="">
         <BetterNewsletter />
+      </div>
+      <div>
+        <Questionnaire />
       </div>
     </div>
   );
