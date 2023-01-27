@@ -85,7 +85,6 @@ const Questionnaire = () => {
   ];
 
   const handleCheck = (e) => {
-
     setChecked(e.target.value);
     console.log("checked");
   };
@@ -96,14 +95,11 @@ const Questionnaire = () => {
       setCount(count + 1);
       console.log(results);
     }
-    setChecked(false)
     console.log(checked)
   };
 
   const previousButton = () => {
-    setResults(prev => {let quest = [...prev]
-    quest.splice(count, 1)
-    return quest})
+    setResults(results.filter(item => item !== checked));
     setCount(count - 1);
     console.log(results)
   };
@@ -119,6 +115,7 @@ const Questionnaire = () => {
     setQuestion(questions[count]);
     setAnswer(questions[count].answers);
     console.log(results)
+    console.log(count)
     if (count > 0) {
       setPrevious(true);
     } else {
