@@ -8,8 +8,6 @@ import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
@@ -19,8 +17,11 @@ import ExpandMore from "@material-ui/icons/ExpandMore";
 import Collapse from "@material-ui/core/Collapse";
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
+<<<<<<< HEAD
 import TestingPage from "../../../pages/TestingEd/TestingEd";
 
+=======
+>>>>>>> Paintersrp/main
 import {
   FaAddressCard,
   FaBell,
@@ -31,10 +32,10 @@ import {
   FaUnlockAlt,
   FaHSquare,
   FaHandLizard,
+  FaCogs,
 } from "react-icons/fa";
-import { TbLetterF } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import { GiEnergySword } from "react-icons/gi";
+import { GiEnergySword, GiPlatform } from "react-icons/gi";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -191,6 +192,16 @@ const items = [
         icon: (
           <FaHandLizard style={{ transform: "rotate(180deg)" }} size={22} />
         ),
+      },
+      {
+        name: "Form Components",
+        link: "/forms",
+        icon: <GiPlatform size={22} />,
+      },
+      {
+        name: "Parts Components",
+        link: "/parts",
+        icon: <FaCogs size={22} />,
       },
     ],
   },

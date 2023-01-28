@@ -1,6 +1,6 @@
-import CategoryTiles from "../../../components/Features/Categories/Categories";
-import CompanyInfo from "../../../components/Features/CompanyInfo/CompanyInfo";
-import IconScroller from "../../../components/Features/IconScroller/IconScroller";
+import CategoryTiles from "../../components/Features/Categories/Categories";
+import CompanyInfo from "../../components/Features/CompanyInfo/CompanyInfo";
+import IconScroller from "../../components/Features/IconScroller/IconScroller";
 import {
   FaTwitter,
   FaFacebook,
@@ -19,17 +19,17 @@ import DesignIcon from "@material-ui/icons/Brush";
 import DevelopIcon from "@material-ui/icons/Code";
 import HostingIcon from "@material-ui/icons/Public";
 import LaunchIcon from "@material-ui/icons/Launch";
-import Demo from "../Demo";
-import BetterFeatures from "../../../components/Features/BetterFeatures/BetterFeatures";
-import EventSchedule from "../../../components/Features/EventSchedule/EventSchedule";
-import FeatureCTA from "../../../components/Features/FeatureCTA/FeatureCTA";
-import FeaturedProducts from "../../../components/Features/FeaturedProducts/FeaturedProduct";
-import FeatureTiles from "../../../components/Features/FeatureTiles/FeatureTiles";
-import LatestNews from "../../../components/Features/LatestNews/LatestNews";
-import OurProcess from "../../../components/Features/OurProcess/OurProcess";
-import Partners from "../../../components/Features/Partners/Partners";
-import Reviews from "../../../components/Features/Reviews/Reviews";
-import WhatWeDo from "../../../components/Features/WhatWeDo/WhatWeDo";
+import Demo from "./Demo";
+import BetterFeatures from "../../components/Features/BetterFeatures/BetterFeatures";
+import EventSchedule from "../../components/Features/EventSchedule-WIP/EventSchedule";
+import FeatureCTA from "../../components/Features/FeatureCTA/FeatureCTA";
+import FeaturedProducts from "../../components/Features/FeaturedProducts/FeaturedProduct";
+import FeatureTiles from "../../components/Features/FeatureTiles/FeatureTiles";
+import LatestNews from "../../components/Features/LatestNews/LatestNews";
+import OurProcess from "../../components/Features/OurProcess/OurProcess";
+import Partners from "../../components/Features/Partners/Partners";
+import Reviews from "../../components/Features/Reviews/Reviews";
+import WhatWeDo from "../../components/Features/WhatWeDo/WhatWeDo";
 
 const partners = [
   {
@@ -65,27 +65,27 @@ const partners = [
 const products = [
   {
     id: 1,
-    name: "Product 1",
-    image: "https://via.placeholder.com/300x200",
+    name: "Camera",
+    image: "images/products/product1.webp",
     rating: 4,
     price: "10.99",
-    description: "This is a sample product 1",
+    description: "Takes Pictures",
   },
   {
     id: 2,
-    name: "Product 2",
-    image: "https://via.placeholder.com/300x200",
+    name: "Titty Camera",
+    image: "images/products/product2.jpeg",
     rating: 3,
     price: "20.99",
-    description: "This is a sample product 2",
+    description: "It's a fucking camera",
   },
   {
     id: 3,
-    name: "Product 3",
-    image: "https://via.placeholder.com/300x200",
+    name: "Drugs",
+    image: "images/products/product3.jpeg",
     rating: 5,
     price: "30.99",
-    description: "This is a sample product 3",
+    description: "Take em",
   },
   // and so on
 ];
@@ -203,16 +203,16 @@ const featureComponents = [
   },
   {
     component: WhatWeDo,
-    title: "WhatWeDo",
+    title: "WhatWeDo WIP",
     props: { data: whatWeDoData },
   },
   {
     component: EventSchedule,
-    title: "EventSchedule",
+    title: "EventSchedule WIP",
   },
   {
     component: BetterFeatures,
-    title: "BetterFeatures",
+    title: "BetterFeatures WIP",
   },
 ];
 

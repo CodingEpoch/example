@@ -1,41 +1,16 @@
-import React, { useState } from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import CheckIcon from "@material-ui/icons/Check";
-import PricingDetails from "./PricingDetails";
-import { CardMedia, Grid, Slide } from "@material-ui/core";
-import { NumberCounter, TypingEffect } from "../../../pages/Test/Test";
-import PricingContact from "./PricingContact";
-
-const CustomButton = withStyles({
-  label: {
-    fontWeight: "700 !important",
-    fontFamily: "Poppins !important",
-    fontSize: "0.85rem !important",
-  },
-})(Button);
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Slide } from "@material-ui/core";
+import PricingCard from "./PricingCard";
 
 const useStyles = makeStyles((theme) => ({
-  overrides: {
-    MuiButton: {
-      label: {
-        color: "red",
-        fontWeight: "bold",
-        fontSize: "0.1rem",
-      },
-    },
-  },
   pricingContainer: {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
   },
+<<<<<<< HEAD
   pricingCard: {
     color: "white",
     backgroundColor: "#212121",
@@ -125,6 +100,8 @@ const useStyles = makeStyles((theme) => ({
     "0%": { opacity: "0.1" },
     "100%": { opacity: "1" },
   },
+=======
+>>>>>>> Paintersrp/main
 }));
 
 const pricingData = [
@@ -212,13 +189,12 @@ const pricingData = [
 
 export default function PricingOverview() {
   const classes = useStyles();
-  const [selectedPlan, setSelectedPlan] = useState(null);
-  const [selectedContact, setSelectedContact] = useState(null);
 
   return (
     <Slide in={true} direction="up" timeout={1000}>
       <div className={classes.pricingContainer}>
         {pricingData.map((plan, index) => (
+<<<<<<< HEAD
           <Card className={classes.pricingCard} key={plan.title}>
             <Typography className={classes.pricingTitle}>
               <TypingEffect duration="0.2" text={plan.title}></TypingEffect>
@@ -274,6 +250,9 @@ export default function PricingOverview() {
               </Grid>
             </CardContent>
           </Card>
+=======
+          <PricingCard pricingData={pricingData} plan={plan} index={index} />
+>>>>>>> Paintersrp/main
         ))}
       </div>
     </Slide>

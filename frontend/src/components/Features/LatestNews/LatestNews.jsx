@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
-import { Link } from "react-router-dom";
 import articles from "./articles.json";
-import Paper from "@material-ui/core/Paper";
-import { TestimonialHeading } from "../../Testimonials/SpeechBubbleTestimonials/SpeechBubbles";
+import ArticleCard from "./ArticleCard";
+import TitleBlock from "../../Parts/TitleBlock";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {},
   },
+<<<<<<< HEAD
   media: {
     height: 180,
     margin: "0px 0px 10px 0px",
@@ -53,6 +50,8 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     color: "inherit",
   },
+=======
+>>>>>>> Paintersrp/main
   cardContent: {
     height: "100%",
     display: "flex",
@@ -61,45 +60,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#212121",
     padding: 10,
     color: "#fafafa",
-  },
-  cardActions: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    padding: 0,
-    margin: 0,
-    width: "100%",
-    backgroundColor: "#212121",
-  },
-  readMoreButton: {
-    "&:hover": {
-      backgroundColor: "rgba(255, 255, 255, 0.1)",
-    },
-    display: "flex",
-    justifyContent: "center",
-    fontSize: "2px",
-    color: "#fafafa",
-    marginRight: 10,
-  },
-  btnText: {
-    padding: 0,
-    margin: 0,
-    fontSize: "14px",
-  },
-  title: {
-    textAlign: "center",
-    color: "#f9f9f9",
-    fontWeight: "700",
-    fontFamily: "Poppins",
-    marginBottom: 20,
-  },
-  subtitle: {
-    marginTop: 25,
-    fontFamily: "Poppins",
-    fontWeight: 600,
-    textAlign: "center",
-    color: "gold",
-    fontSize: "0.8rem",
   },
 }));
 
@@ -149,12 +109,12 @@ export default function LatestNews() {
   return (
     <Grid container spacing={0} className={classes.root}>
       <Grid item xs={12}>
-        <Typography variant="h4" className={classes.subtitle}>
-          In the Know
-        </Typography>
-        <Typography variant="h4" className={classes.title}>
-          Latest News
-        </Typography>
+        <TitleBlock
+          subtitle="In the Knows"
+          title="Latest News"
+          alignment="center"
+          showDivider={false}
+        />
       </Grid>
       {articlesData.map((article) => (
         <Grid
@@ -165,6 +125,7 @@ export default function LatestNews() {
           md={4}
           className={classes.cardroot}
         >
+<<<<<<< HEAD
           <Card className={classes.card}>
             <CardActionArea
               component={Link}
@@ -201,6 +162,9 @@ export default function LatestNews() {
               </Button>
             </div>
           </Card>
+=======
+          <ArticleCard article={article} />
+>>>>>>> Paintersrp/main
         </Grid>
       ))}
     </Grid>

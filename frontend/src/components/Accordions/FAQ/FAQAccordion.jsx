@@ -1,28 +1,10 @@
-import React from "react";
-import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Typography,
-  Paper,
-} from "@material-ui/core";
-import { MdExpandMore } from "react-icons/Md";
-import { FaQuestion } from "react-icons/fa";
+import React, { useState } from "react";
+import { Typography, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import faqData from "./faqData";
 import { Grid } from "@material-ui/core";
-
-const transitionProps = {
-  timeout: {
-    enter: 400,
-    exit: 400,
-  },
-  mountOnEnter: true,
-  unmountOnExit: true,
-  addEndListener: (node, done) => {
-    node.addEventListener("transitionend", done, false);
-  },
-};
+import AccordionQA from "../../Parts/AccordionQA";
+import { Tabs, Tab } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,34 +12,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#1C1C1C",
     color: theme.palette.common.white,
     padding: theme.spacing(4),
-  },
-  question: {
-    display: "flex",
-    alignItems: "center",
-  },
-  icon: {
-    marginRight: theme.spacing(1),
-    marginBottom: 4,
-    color: "white",
-    fontSize: "1rem",
-  },
-  heading: {
-    fontSize: "1.2rem",
-    fontWeight: 700,
-    fontFamily: "Poppins",
-    color: "white",
-  },
-  details: {
-    padding: theme.spacing(2),
-    backgroundColor: "#242424",
-    color: "white",
-    fontFamily: "Poppins",
-    textAlign: "left",
-  },
-  summary: {
-    backgroundColor: "#242424",
-    fontFamily: "Poppins",
-    color: "white",
   },
   title: {
     textAlign: "center",
@@ -70,18 +24,35 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: "100%",
   },
+  tab: {
+    backgroundColor: "#212121",
+    width: "20%",
+    color: "#f9f9f9",
+    fontWeight: "700",
+    fontFamily: "Poppins",
+    textTransform: "uppercase",
+    fontSize: "0.85rem",
+    minWidth: "auto",
+    marginRight: theme.spacing(1),
+    "&:focus": {
+      color: "#f9f9f9",
+    },
+    "&:hover": {
+      transform: "scale(1.02)",
+    },
+  },
+  tabsIndicator: {
+    backgroundColor: "#f9f9f9",
+  },
 }));
 
 const FAQAccordion = () => {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState([]);
 
-  const handleChange = (panel) => (event, isExpanded) => {
-    if (isExpanded) {
-      setExpanded([...expanded, panel]);
-    } else {
-      setExpanded(expanded.filter((p) => p !== panel));
-    }
+  const [currentCategory, setCurrentCategory] = useState("Shipping");
+
+  const handleTabChange = (event, newValue) => {
+    setCurrentCategory(newValue);
   };
 
   return (
@@ -98,31 +69,23 @@ const FAQAccordion = () => {
           </Typography>
         </Grid>
         <Paper elevation={6} className={classes.root}>
-          <Grid container spacing={2}>
-            {faqData.map((faq) => (
+          <Tabs
+            value={currentCategory}
+            onChange={handleTabChange}
+            classes={{ indicator: classes.tabsIndicator }}
+          >
+            {Object.keys(faqData).map((category) => (
+              <Tab
+                label={category}
+                value={category}
+                classes={{ root: classes.tab }}
+              />
+            ))}
+          </Tabs>
+          <Grid container spacing={2} style={{ marginTop: 0 }}>
+            {faqData[currentCategory].map((faq) => (
               <Grid item xs={12}>
-                <Accordion
-                  expanded={expanded.includes(faq.id)}
-                  onChange={handleChange(faq.id)}
-                  disableGutters="true"
-                  TransitionProps={transitionProps}
-                >
-                  <AccordionSummary
-                    expandIcon={<MdExpandMore color="white" />}
-                    aria-controls={`${faq.id}-content`}
-                    id={`${faq.id}-header`}
-                    className={classes.summary}
-                  >
-                    <div className={classes.question}>
-                      <Typography className={classes.heading}>
-                        {faq.question}
-                      </Typography>
-                    </div>
-                  </AccordionSummary>
-                  <AccordionDetails className={classes.details}>
-                    <Typography>{faq.answer}</Typography>
-                  </AccordionDetails>
-                </Accordion>
+                <AccordionQA faq={faq} />
               </Grid>
             ))}
           </Grid>
