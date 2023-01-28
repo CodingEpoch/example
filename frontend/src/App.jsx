@@ -11,12 +11,8 @@ import TestPage from "./pages/Test/Test";
 import HeroDemo from "./pages/Demos/HeroesDemo";
 import FeatureDemo from "./pages/Demos/FeaturesDemo";
 import DrawerBased from "./components/Navigation/DrawerBased/DrawerBased";
-<<<<<<< HEAD
-import TestingPage from "./pages/TestingEd/TestingEd";
-=======
 import FormDemo from "./pages/Demos/FormDemos";
 import PartsDemo from "./pages/Demos/PartDemos";
->>>>>>> Paintersrp/main
 
 function App() {
   return (
@@ -36,12 +32,8 @@ function App() {
 
         <Route path="/heroes" element={<HeroDemo />} />
         <Route path="/features" element={<FeatureDemo />} />
-<<<<<<< HEAD
-        <Route path="/testing" element={<TestingPage />} />
-=======
         <Route path="/forms" element={<FormDemo />} />
         <Route path="/parts" element={<PartsDemo />} />
->>>>>>> Paintersrp/main
       </Routes>
       <MuiFooter />
     </Router>

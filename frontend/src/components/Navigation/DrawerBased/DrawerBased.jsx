@@ -17,11 +17,6 @@ import ExpandMore from "@material-ui/icons/ExpandMore";
 import Collapse from "@material-ui/core/Collapse";
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
-<<<<<<< HEAD
-import TestingPage from "../../../pages/TestingEd/TestingEd";
-
-=======
->>>>>>> Paintersrp/main
 import {
   FaAddressCard,
   FaBell,

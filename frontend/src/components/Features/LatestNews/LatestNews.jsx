@@ -34,24 +34,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {},
   },
-<<<<<<< HEAD
-  media: {
-    height: 180,
-    margin: "0px 0px 10px 0px",
-    backgroundColor: "#212121",
-    
-  },
-  actionArea: {
-    "&:hover": {
-      opacity: '.8',
-    },
-  },
-  actionAreaLink: {
-    textDecoration: "none",
-    color: "inherit",
-  },
-=======
->>>>>>> Paintersrp/main
   cardContent: {
     height: "100%",
     display: "flex",
@@ -125,46 +107,7 @@ export default function LatestNews() {
           md={4}
           className={classes.cardroot}
         >
-<<<<<<< HEAD
-          <Card className={classes.card}>
-            <CardActionArea
-              component={Link}
-              to={`/articles/${article.id}`}
-              className={classes.actionArea}
-            >
-              {" "}
-              <CardContent className={classes.cardContent}>
-                <Typography gutterBottom variant="h5" className={classes.title} component="h2">
-                  {article.title}
-                </Typography>
-                <CardMedia
-                  className={classes.media}
-                  image={article.image}
-                  title={article.title}
-                />
-
-                <Typography variant="body2" component="p">
-                  {article.preview}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <div className={classes.cardActions}>
-              <Button
-                variant="text"
-                color="inherit"
-                size="small"
-                justifyContent="center"
-                component={Link}
-                to={`/articles/${article.id}`}
-                className={classes.readMoreButton}
-              >
-                <h4 className={classes.btnText}>More</h4>
-              </Button>
-            </div>
-          </Card>
-=======
           <ArticleCard article={article} />
->>>>>>> Paintersrp/main
         </Grid>
       ))}
     </Grid>
