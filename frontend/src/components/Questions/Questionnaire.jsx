@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     margin: "auto",
     width: "250px",
+    alignItems: "flex-start",
   },
   answerContainer: {
     display: "flex",
@@ -20,24 +21,27 @@ const useStyles = makeStyles((theme) => ({
   questionContainer: {
     margin: "auto",
     color: "white",
+    marginTop: "15px",
     backgroundColor: "#1c1c1c",
     justifyContent: "center",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     width: "85%",
-    paddingBottom: '20px'
   },
   labelDiv: {
-    width: '70%',
+    width: "50%",
+    justifyContent: "flex-start",
+    display: "flex",
   },
   label: {
     color: "white",
     fontSize: "16px",
-    display: "inline",
+    display: "flex",
     flexDirection: "row",
-    textAlign: 'right',
-    width: '100px',
+    textAlign: "right",
+    width: "100px",
+    justifyContent: "flex-start",
   },
 }));
 
@@ -92,37 +96,37 @@ const Questionnaire = () => {
 
   const nextButton = () => {
     if (checked !== false) {
-      setResults(prev => [...prev, checked])
+      setResults((prev) => [...prev, checked]);
       setCount(count + 1);
       console.log(results);
     }
-    console.log(checked)
+    console.log(checked);
   };
 
   const previousButton = () => {
-    setResults(results.filter(item => item !== checked));
+    setResults(results.filter((item) => item !== checked));
     setCount(count - 1);
-    console.log(results)
+    console.log(results);
   };
 
   useEffect(() => {
-    if(results.length === 3){
-      setEnd(true)
+    if (results.length === 3) {
+      setEnd(true);
     }
-  }, [results])
+  }, [results]);
 
   useEffect(() => {
-    if(results.length !== 3){
-    setQuestion(questions[count]);
-    setAnswer(questions[count].answers);
-    console.log(results)
-    console.log(count)
-    if (count > 0) {
-      setPrevious(true);
-    } else {
-      setPrevious(false);
+    if (results.length !== 3) {
+      setQuestion(questions[count]);
+      setAnswer(questions[count].answers);
+      console.log(results);
+      console.log(count);
+      if (count > 0) {
+        setPrevious(true);
+      } else {
+        setPrevious(false);
+      }
     }
-  }
   }, [count]);
 
   return (
@@ -141,7 +145,7 @@ const Questionnaire = () => {
                 </div>
                 <div>
                   <input
-                  key={x.value}
+                    key={x.value}
                     value={x.label}
                     onChange={handleCheck}
                     name={question.name}
