@@ -173,6 +173,11 @@ const items = [
     link: "/testing",
   },
   {
+    name: "TestingEd1",
+    icon: <FaAddressCard size={22} />,
+    link: "/tested1",
+  },
+  {
     name: "Demos",
     icon: <FaBoxOpen size={22} />,
     children: [
