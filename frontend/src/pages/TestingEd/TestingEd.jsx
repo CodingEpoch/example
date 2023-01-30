@@ -88,7 +88,7 @@ const items = [
   },
 ];
 
-function TestingPage() {
+function TestingEd() {
   return (
     <div className="landing-container">
       <div className="">
@@ -120,4 +120,4 @@ function TestingPage() {
   );
 }
 
-export default TestingPage;
+export default TestingEd;

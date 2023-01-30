@@ -13,6 +13,7 @@ import FeatureDemo from "./pages/Demos/FeaturesDemo";
 import DrawerBased from "./components/Navigation/DrawerBased/DrawerBased";
 import FormDemo from "./pages/Demos/FormDemos";
 import PartsDemo from "./pages/Demos/PartDemos";
+import TestingEd from "./pages/TestingEd/TestingEd";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/features" element={<FeatureDemo />} />
         <Route path="/forms" element={<FormDemo />} />
         <Route path="/parts" element={<PartsDemo />} />
+        <Route path='/testinged' element={<TestingEd />} />
       </Routes>
       <MuiFooter />
     </Router>
