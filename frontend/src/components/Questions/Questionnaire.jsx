@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     width: "85%",
+    paddingBottom: '20px'
   },
   labelDiv: {
     width: '70%',
@@ -129,6 +130,7 @@ const Questionnaire = () => {
       {count <= 2 && (
         <>
           <div>
+            <h2>Questionnaire of the Day</h2>
             <h3>{question.question}</h3>
           </div>
           <div className={classes.answersContainer}>

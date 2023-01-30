@@ -54,8 +54,7 @@ import "./test.css";
 import FeatureCTA from "../../components/Features/FeatureCTA/FeatureCTA";
 import { FaCode, FaPencilRuler, FaServer } from "react-icons/fa";
 import CategoryTiles from "../../components/Features/Categories/Categories";
-import FeaturedProducts from "../../components/Features/FeaturedProducts/FeaturedProduct";
-import OurProcess from "../../components/Features/OurProcess/OurProcess";
+import FeaturedProducts1 from "../../components/Features/FeaturedProducts/FeaturedProduct1";
 import AllInclusiveIcon from "@material-ui/icons/AllInclusive";
 import LockIcon from "@material-ui/icons/Lock";
 import DesignIcon from "@material-ui/icons/Brush";
@@ -65,6 +64,7 @@ import LaunchIcon from "@material-ui/icons/Launch";
 import FormHero from "../../components/Heroes/FormHero/FormHero";
 import Partners from "../../components/Features/Partners/Partners";
 import IconScroller from "../../components/Features/IconScroller/IconScroller";
+import OurProcess1 from "../../components/Features/OurProcess/OurProcess1";
 import {
   FaTwitter,
   FaFacebook,
@@ -74,8 +74,9 @@ import {
   FaGithub,
   FaStackOverflow,
 } from "react-icons/fa";
-import Reviews from "../../components/Features/Reviews/Reviews";
+import Reviews1 from "../../components/Features/Reviews/Reviews1";
 import Questionnaire from "../../components/Questions/Questionnaire";
+import Poll from "../../components/Poll/Poll";
 const members = [
   {
     id: 1,
@@ -289,13 +290,13 @@ export default function TestEd1() {
               <CategoryTiles />
             </div>
             <div>
-              <Reviews />
+              <Reviews1 />
             </div>
             <div>
               <IconScroller data={partners} />
             </div>
             <div>
-              <OurProcess
+              <OurProcess1
                 data={data2}
                 title="Creating and Hosting Websites"
                 subtitle="Our Process"
@@ -306,7 +307,7 @@ export default function TestEd1() {
             </div>
 
             <div>
-              <FeaturedProducts products={products} />
+              <FeaturedProducts1 products={products} />
             </div>
 
             <div>
@@ -315,6 +316,10 @@ export default function TestEd1() {
             <div>
               <Questionnaire />
             </div>
+            <div>
+              <Poll />
+            </div>
+
             {/* <div>
               <WhatWeDo2 data={data} />
             </div> */}
