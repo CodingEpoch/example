@@ -16,6 +16,8 @@ const userStyles = makeStyles({
   },
   articleContainer: {
     width: "72%",
+    marginTop: '20px',
+    marginBottom: '20px',
     display: 'flex',
     padding: '15px',
     boxShadow: '2px 2px 9px black, -2px -2px 9px black',
@@ -23,6 +25,9 @@ const userStyles = makeStyles({
   },
   textContainer: {
     width: '50%'
+  },
+  title: {
+    textAlign: 'center'
   },
   imageContainer: {
     width: '50%',
@@ -68,7 +73,7 @@ function ArticlePage() {
             <>
               <div className={`${classes.articleContainer} `}>
                 <div className={`${classes.textContainer}`}>
-                    <h3>{item.title}</h3>
+                    <h3 className={classes.title}>{item.title}</h3>
                     <p>{item.details}</p>
                 </div>
                 <div className={classes.imageContainer}>
