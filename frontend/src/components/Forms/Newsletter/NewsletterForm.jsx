@@ -28,14 +28,14 @@ const useStyles = makeStyles((theme) => ({
     padding: 40,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#242424",
+    backgroundColor: "whtie",
   },
   container: {
     maxWidth: "600px",
-    backgroundColor: "#1C1C1C",
+    backgroundColor: "blue",
     color: "white",
     boxShadow: theme.shadows[10],
-    borderRadius: theme.shape.borderRadius.lg,
+    borderRadius: '7px',
     padding: theme.spacing(6),
     direction: "column",
   },
@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
     width: '65%',
+    border: '2px solid blue',
     margin: theme.spacing(1),
     "& .MuiOutlinedInput-root": {
       "&.Mui-focused fieldset": {
@@ -70,24 +71,33 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     "& .MuiFormLabel-root": {
-      color: "white",
+      color: "blue",
+      backgroundColor: 'white',
       fontWeight: "700",
       fontSize: "0.9rem",
     },
     "& input": {
-      color: "white",
+      backgroundColor: 'white',
+      color: "blue",
+      borderRadius: '7px'
     },
   },
   submit: {
     height: '50px',
     width: '100px',
+    backgroundColor: 'white',
+    color: 'blue',
+    '&hover': {
+      backgroundColor: 'white',
+      color: 'blue'
+    }
   },
   error: {
     color: theme.palette.error.main,
   },
   text: {
     marginTop: 5,
-    color: "gold",
+    color: "white",
   },
 }));
 
@@ -134,7 +144,6 @@ export default function NewsletterForm() {
           />
               <CustomButton
                 variant="contained"
-                color="primary"
                 disabled={state !== "initial"}
                 type={state === "success" ? "button" : "submit"}
                 className={classes.submit}

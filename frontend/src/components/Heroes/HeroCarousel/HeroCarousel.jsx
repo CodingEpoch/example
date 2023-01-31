@@ -9,9 +9,9 @@ import SocialSection from "../../Parts/SocialSection";
 const useStyles = makeStyles((theme) => ({
   root: {
     fontFamily: "Poppins",
-    backgroundColor: "#212121",
+    backgroundColor: "white",
     paddingTop: theme.spacing(6),
-    paddingBottom: theme.spacing(12),
+    paddingBottom: theme.spacing(2),
     position: "relative",
   },
   gridContainer: {
@@ -36,7 +36,9 @@ const useStyles = makeStyles((theme) => ({
   contactContainer: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "flex-end",
+    alignItems: 'center',
+    marginTop: '50px',
   },
 }));
 
@@ -48,13 +50,14 @@ export default function HeroCarousel({ items }) {
       <Container style={{ maxWidth: "95%" }} className={classes.gridContainer}>
         <Grid container className={classes.grid}>
           <Slide in={true} direction="right" timeout={1000}>
-            <Grid item xs={12} md={6} className={classes.gridItemLeft}>
+            <Grid item xs={12} md={12} className={classes.gridItemLeft}>
               <HeroBlock
                 title="Custom Designs"
                 heading="Modern Framework, <br /> Design, and Hosting"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium elit sed consectetur ultricies. Praesent lacinia luctus lacus, sit amet cursus nisl faucibus ac. Proin sollicitudin, tellus et scelerisque hendrerit, leo turpis ornare diam, ac fermentum massa diam a nisi."
+                text='Backed by years of experience and knowledge in the industry, EdgeLords aims to provide new and current entrepreneurs with a premium framework, excellent hosting, custom design, and human customer service in order to establish their brand successfully.'
                 btnText="Get Started"
                 btnLink="/about"
+                className={classes.heroBlock}
               />
 
               <Grid item xs={12} md={12} className={classes.contactContainer}>
@@ -63,12 +66,6 @@ export default function HeroCarousel({ items }) {
               </Grid>
             </Grid>
           </Slide>
-
-          <Grid item xs={12} md={6}>
-            <SlideOnScroll from="right">
-              <CarouselX items={items} />
-            </SlideOnScroll>
-          </Grid>
         </Grid>
       </Container>
     </Box>

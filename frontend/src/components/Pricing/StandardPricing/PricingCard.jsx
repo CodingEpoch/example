@@ -26,12 +26,13 @@ const CustomButton = withStyles({
 const useStyles = makeStyles((theme) => ({
   pricingCard: {
     color: "white",
-    backgroundColor: "#212121",
+    backgroundColor: "blue",
     maxWidth: 375,
     minWidth: 375,
     margin: theme.spacing(4),
     padding: theme.spacing(3),
     boxShadow: theme.shadows[7],
+    borderRadius: '10px',
     transition: "box-shadow 0.3s ease-in-out",
     "&:hover": {
       transform: "scale(1.005)",
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.75rem",
     textAlign: "center",
     fontFamily: "Poppins",
-    color: "gold",
+    color: "white",
     opacity: 0.9,
   },
   pricingPrice: {
@@ -68,16 +69,18 @@ const useStyles = makeStyles((theme) => ({
   pricingButton: {
     marginTop: theme.spacing(2),
     width: "100%",
-    backgroundColor: theme.palette.primary.main,
-    color: "white",
+    backgroundColor: 'white',
+    color: "blue",
     "&:hover": {
       transform: "scale(1.02)",
-      boxShadow: theme.shadows[7],
-      backgroundColor: theme.palette.primary.dark,
+      backgroundColor: 'blue',
+      boxShadow: theme.shadows[5],
+      border: '2px solid white',
+      color: 'white'
     },
   },
   checkIcon: {
-    color: "gold;",
+    color: "lightgreen",
     marginRight: "10px",
   },
   media: {

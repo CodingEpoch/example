@@ -12,7 +12,7 @@ import testimonials from "./testimonials.json";
 const useStyles = makeStyles((theme) => ({
   testimonialContent: {
     fontFamily: "Poppins",
-    backgroundColor: "#212121",
+    backgroundColor: "blue",
     color: "white",
     maxWidth: 500,
     justifyContent: "center",
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins",
     textAlign: "center",
     color: "white",
-    fontSize: "0.85rem",
+    fontSize: ".85rem",
   },
   testimonialAvatar: {
     fontFamily: "Poppins",
@@ -92,8 +92,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins",
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
-    backgroundColor: "#1C1C1C",
-    color: "white",
+    backgroundColor: "white",
+    color: "blue",
     justifyContent: "center",
     display: "flex",
   },
@@ -108,8 +108,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     margin: 0,
     textAlign: "center",
-    color: "gold",
-    fontSize: "0.8rem",
+    color: "blue",
+    letterSpacing: '1.2px',
+    fontSize: "1.3rem",
   },
   speechBubblesText: {
     fontFamily: "Poppins",

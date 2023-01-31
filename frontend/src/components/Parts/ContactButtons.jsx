@@ -8,12 +8,14 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 140,
     margin: theme.spacing(1),
     boxShadow: theme.shadows[3],
-    backgroundColor: "#1C1C1C",
-    color: theme.palette.primary.contrastText,
+    backgroundColor: "white",
+    color: 'blue',
+
     "&:hover": {
       transform: "scale(1.02)",
       boxShadow: theme.shadows[7],
-      backgroundColor: theme.palette.action.hover,
+      backgroundColor: 'blue',
+      color: 'white'
     },
   },
   buttonContainer: {
@@ -33,7 +35,7 @@ function ContactButtons() {
         color="primary"
         startIcon={<FaPhone />}
         href="tel:555-555-5555"
-        className={classes.button}
+        className={`${classes.button} b-3-primary br-w-2`}
         style={{ marginRight: 5 }}
       >
         Call Us
@@ -43,7 +45,7 @@ function ContactButtons() {
         color="primary"
         startIcon={<FaVoicemail />}
         href="mailto:hello@example.com"
-        className={classes.button}
+        className={`${classes.button} b-3-primary br-w-2`}
       >
         Email Us
       </Button>

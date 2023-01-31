@@ -32,18 +32,18 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontFamily: "Poppins",
     textAlign: "center",
-    color: "white",
+    color: "blue",
     fontWeight: 700,
     fontSize: "2.1rem",
     border: 0,
     marginBottom: theme.spacing(1),
   },
   subtitle: {
-    fontSize: "0.85rem",
+    fontSize: "1.5rem",
     fontWeight: 700,
     fontFamily: "Poppins",
     textAlign: "center",
-    color: "gold",
+    color: "blue",
     marginBottom: theme.spacing(0.5),
   },
   divider: {

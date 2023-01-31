@@ -6,31 +6,32 @@
   align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
-  background-color: #242424;
+  background-color: white;
 }
 
 .tile-bg {
-  background-color: #212121 !important;
+  background-color: blue !important;
 }
 
 .testing {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: blue;
 }
 
 .feature-paper {
   padding: 16px;
   color: #fafafa;
-  background-color: #424242;
+  background-color: blue;
   min-width: 300px;
   max-width: 300px;
   min-height: 140px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #212121 !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 blue !important;
 }
 
 .g-container :hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #212121 !important;
 }
 
@@ -47,8 +48,9 @@
 .feature-title {
   font-size: 1.1rem !important;
   font-weight: bold;
-  color: gold;
+  color: white;
   margin: 10px 0;
+  letter-spacing: 1.1px;
 }
 
 .feature-subheader {

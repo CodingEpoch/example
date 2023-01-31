@@ -35,8 +35,8 @@ $darkgray: rgb(61, 61, 61);
 $lightgray: rgb(172, 172, 172);
 
 /* Four Horsemen Color Placeholders */
-$primary: $green;
-$secondary: $blue;
+$primary: $blue;
+$secondary: $white;
 $warning: $red;
 $caution: $yellow;
 
@@ -71,8 +71,8 @@ $colors: (
 
 /* Used for website */
 $fourHorsemen: (
-  'primary': $green,
-  'secondary': $blue,
+  'primary': $blue,
+  'secondary': $white,
   'warning': $red,
   'caution': $yellow,
   'white': white,

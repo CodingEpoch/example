@@ -26,11 +26,11 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
     marginBottom: theme.spacing(1),
     fontSize: "1.25rem",
-    color: "gold",
+    color: "Blue",
   },
   heading: {
     fontFamily: "Poppins",
-    color: "white",
+    color: "black",
     marginBottom: theme.spacing(0),
     fontSize: "2.25rem",
     [theme.breakpoints.down("md")]: {
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     fontFamily: "Poppins",
     fontSize: "1.25rem",
-    color: theme.palette.grey[400],
+    color: 'black',
     paddingBottom: 10,
     paddingTop: 10,
     [theme.breakpoints.down("md")]: {
@@ -51,22 +51,31 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins",
     [theme.breakpoints.up("md")]: {
       textAlign: "center",
+      width: '68%',
+      display: 'flex',
+      textAlign: 'left',
+      margin: 'auto',
+      flexDirection: 'column'
     },
   },
   btnCta: {
     minWidth: 140,
     boxShadow: theme.shadows[3],
-    backgroundColor: "#1C1C1C",
+    backgroundColor: "blue",
+    padding: 10,
+    transition: '.3s',
     color: theme.palette.primary.contrastText,
     "&:hover": {
       transform: "scale(1.02)",
       boxShadow: theme.shadows[7],
-      backgroundColor: theme.palette.action.hover,
+      backgroundColor: 'white',
+      color: 'blue'
     },
   },
   btnContainer: {
     display: "flex",
     width: "100%",
+    marginTop: '30px',
     justifyContent: "center",
   },
 }));

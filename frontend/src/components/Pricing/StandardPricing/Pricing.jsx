@@ -2,13 +2,26 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Slide } from "@material-ui/core";
 import PricingCard from "./PricingCard";
-
 const useStyles = makeStyles((theme) => ({
   pricingContainer: {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "white",
+  },
+  title: {
+    color: "blue",
+    fontSize: "2.25rem",
+    textAlign: "center",
+    marginTop: "50px",
+    letterSpacing: "1.2px",
+  },
+  hr: {
+    backgroundColor: "blue",
+    color: "blue",
+    width: "75%",
+    border: ".75px solid blue",
   },
 }));
 
@@ -99,12 +112,18 @@ export default function PricingOverview() {
   const classes = useStyles();
 
   return (
-    <Slide in={true} direction="up" timeout={1000}>
-      <div className={classes.pricingContainer}>
-        {pricingData.map((plan, index) => (
-          <PricingCard pricingData={pricingData} plan={plan} index={index} />
-        ))}
-      </div>
-    </Slide>
+    <>
+      <hr className={classes.hr} />
+
+      <h2 className={classes.title}>Pricing Tiers</h2>
+
+      <Slide in={true} direction="up" timeout={1000}>
+        <div className={classes.pricingContainer}>
+          {pricingData.map((plan, index) => (
+            <PricingCard pricingData={pricingData} plan={plan} index={index} />
+          ))}
+        </div>
+      </Slide>
+    </>
   );
 }

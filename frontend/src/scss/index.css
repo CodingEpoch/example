@@ -15,27 +15,27 @@ Borders, Box Shadow, and Gaps */
 /* font-size */
 /* letter-spacing */
 .text-primary {
-  color: green !important;
-}
-
-.bg-primary {
-  background-color: green !important;
-}
-
-.bc-primary {
-  border-color: green !important;
-}
-
-.text-secondary {
   color: blue !important;
 }
 
-.bg-secondary {
+.bg-primary {
   background-color: blue !important;
 }
 
-.bc-secondary {
+.bc-primary {
   border-color: blue !important;
+}
+
+.text-secondary {
+  color: white !important;
+}
+
+.bg-secondary {
+  background-color: white !important;
+}
+
+.bc-secondary {
+  border-color: white !important;
 }
 
 .text-warning {
@@ -544,11 +544,11 @@ Borders, Box Shadow, and Gaps */
 }
 
 .b-0-primary {
-  border: 0px solid green !important;
+  border: 0px solid blue !important;
 }
 
 .b-0-secondary {
-  border: 0px solid blue !important;
+  border: 0px solid white !important;
 }
 
 .b-0-warning {
@@ -572,11 +572,11 @@ Borders, Box Shadow, and Gaps */
 }
 
 .b-1-primary {
-  border: 1px solid green !important;
+  border: 1px solid blue !important;
 }
 
 .b-1-secondary {
-  border: 1px solid blue !important;
+  border: 1px solid white !important;
 }
 
 .b-1-warning {
@@ -600,11 +600,11 @@ Borders, Box Shadow, and Gaps */
 }
 
 .b-2-primary {
-  border: 2.25px solid green !important;
+  border: 2.25px solid blue !important;
 }
 
 .b-2-secondary {
-  border: 2.25px solid blue !important;
+  border: 2.25px solid white !important;
 }
 
 .b-2-warning {
@@ -628,11 +628,11 @@ Borders, Box Shadow, and Gaps */
 }
 
 .b-3-primary {
-  border: 3.5px solid green !important;
+  border: 3.5px solid blue !important;
 }
 
 .b-3-secondary {
-  border: 3.5px solid blue !important;
+  border: 3.5px solid white !important;
 }
 
 .b-3-warning {
@@ -656,11 +656,11 @@ Borders, Box Shadow, and Gaps */
 }
 
 .b-4-primary {
-  border: 4.75px solid green !important;
+  border: 4.75px solid blue !important;
 }
 
 .b-4-secondary {
-  border: 4.75px solid blue !important;
+  border: 4.75px solid white !important;
 }
 
 .b-4-warning {
@@ -741,4 +741,4 @@ Borders, Box Shadow, and Gaps */
 
 .raleway {
   font-family: "Raleway", sans-serif !important;
-}
+}/*# sourceMappingURL=index.css.map */

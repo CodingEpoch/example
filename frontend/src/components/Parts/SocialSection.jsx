@@ -9,12 +9,18 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 const useStyles = makeStyles((theme) => ({
   socialIcons: {
     color: "white",
-    paddingLeft: 5,
+    padding: 7,
+    borderRadius: 10,
+    backgroundColor: 'blue',
     "&:hover": {
       transform: "scale(1.05)",
-      color: "gold",
+      color: "blue",
+      backgroundColor: 'white !important'
     },
   },
+  icon: {
+    backgroundColor: 'white !important'
+  }
 }));
 
 export default function SocialSection({ title }) {
@@ -41,21 +47,24 @@ export default function SocialSection({ title }) {
         }}
       >
         <IconButton
+        className={classes.icon}
           aria-label="facebook"
           href="https://www.facebook.com/example"
         >
           <FacebookIcon fontSize="large" className={classes.socialIcons} />
         </IconButton>
-        <IconButton aria-label="twitter" href="https://twitter.com/example">
+        <IconButton className={classes.icon} aria-label="twitter" href="https://twitter.com/example">
           <TwitterIcon fontSize="large" className={classes.socialIcons} />
         </IconButton>
         <IconButton
+        className={classes.icon}
           aria-label="instagram"
           href="https://www.instagram.com/example"
         >
           <InstagramIcon fontSize="large" className={classes.socialIcons} />
         </IconButton>
         <IconButton
+          className={classes.icon}
           aria-label="linkedin"
           href="https://www.linkedin.com/company/example"
         >

@@ -95,18 +95,11 @@ function LandingPage() {
       <div className="">
         <HeroCarousel items={items} />
       </div>
-      <div>
-        <IconScroller data={partners} />
-      </div>
       <div className="">
         <PricingOverview />
       </div>
       <div className="">
         <FeatureTiles />
-      </div>
-      <div className="car-container">
-        {/* <TestimonialSection /> */}
-        <BetterTestimonials />
       </div>
       <div className="">
         <LatestNews />
