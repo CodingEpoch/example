@@ -163,9 +163,14 @@ const items = [
     link: "/about",
   },
   {
+    name: "Articles",
+    icon: <FaBell size={22} />,
+    link: "/articles",
+  },
+  {
     name: "Contact",
     icon: <FaAddressCard size={22} />,
-    link: "/about",
+    link: "/contact",
   },
   {
     name: "Testing",

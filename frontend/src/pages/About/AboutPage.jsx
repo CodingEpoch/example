@@ -48,13 +48,7 @@ function AboutPage() {
         </div>
         <div className="">
           <TeamMembers members={members} />
-        </div>
-
-        <Divider variant="fullWidth" className={classes.divider} />
-        
-        <div className="card-container-about bg-secondary">
-          <BetterContact />
-        </div>
+        </div>        
         <Divider variant="fullWidth" className={classes.divider} />
         <div className="card-container-about">
           <FAQAccordion />

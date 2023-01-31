@@ -14,6 +14,8 @@ import DrawerBased from "./components/Navigation/DrawerBased/DrawerBased";
 import FormDemo from "./pages/Demos/FormDemos";
 import PartsDemo from "./pages/Demos/PartDemos";
 import TestEd1 from "./pages/TestEd/TestEd1";
+import ContactPage from "./pages/Contact/ContactPage";
+import ArticlePage from "./pages/Article/ArticlePage";
 function App() {
   return (
     <Router>
@@ -28,8 +30,8 @@ function App() {
         <Route path="/test" element={<TestPage />} />
 
         <Route path="/services" element={<TestPage />} />
-        <Route path="/contact" element={<AboutPage />} />
-
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path='/articles' element={<ArticlePage />}></Route>
         <Route path="/heroes" element={<HeroDemo />} />
         <Route path="/features" element={<FeatureDemo />} />
         <Route path="/forms" element={<FormDemo />} />
