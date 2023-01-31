@@ -20,14 +20,14 @@ import {
 const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: "bold",
-    color: "white",
-    textAlign: "left !important",
+    color: "blue",
+    textAlign: "center !important",
     borderBottom: "1px solid white !important",
     marginBottom: "10px !important",
     paddingBottom: "2px !important",
   },
   subtitle: {
-    color: "white",
+    color: "blue",
     marginLeft: 15,
     minWidth: 200,
   },
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 30,
   },
   avatar: {
-    backgroundColor: "#f2cc23dd",
+    backgroundColor: "blue",
     color: "theme.palette.primary.contrastText",
   },
 }));

@@ -13,22 +13,29 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     maxWidth: "1400px",
     minHeight: "700px",
-    backgroundColor: "#1C1C1C",
+    backgroundColor: "white",
+    color: 'black'
   },
   heading: {
     fontWeight: 800,
-    color: "white",
+    color: "blue",
+    letterSpacing: '1.15px',
     textAlign: "center",
     marginBottom: 15,
     fontSize: "2.5rem",
   },
+  core: {
+    display: 'flex',
+    margin: 'auto',
+    border: '2px solid blue'
+  }
 }));
 
 export default function CompanyInfo() {
   const classes = useStyles();
 
   return (
-    <div className="landing-container-about">
+    <div className={classes.root}>
       <Box display="flex" justifyContent="center">
         <Card
           elevation={6}
@@ -45,32 +52,13 @@ export default function CompanyInfo() {
             </Typography>
             <ContentBlock
               title="Company Mission"
-              body="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
-              in, dolore facere iusto veritatis laudantium cupiditate temporibus
-              saepe culpa incidunt voluptate. Voluptates velit autem
-              exercitationem aliquid animi est ex esse consequuntur magnam neque
-              dolore quod necessitatibus, porro ipsam qui id tempore voluptatum
-              laborum error nobis consectetur. Molestias unde illum illo facere
-              cupiditate error. Ab, reprehenderit at. Officiis repellendus
-              repellat provident temporibus laborum veritatis enim obcaecati,
-              quas nemo consequatur repudiandae vitae illo reiciendis
-              consequuntur eligendi culpa quod sint atque, architecto
-              reprehenderit, ut error ipsa impedit qui. Ex officiis maxime id
-              vel, pariatur eligendi saepe blanditiis, necessitatibus rerum
-              repudiandae commodi, illum odio?"
+              body="Prospective and current entrepreneurs don't have many affordable and user friendly options that provide a design and hosting service package. We help fill that gap by providing you with a variety of services tailored to your needs."
             />
 
-            <CoreValues />
+            <CoreValues className={classes.core}/>
             <ContentBlock
               title="Company History"
-              body="Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Explicabo libero, necessitatibus laudantium iusto doloribus,
-              veritatis neque esse voluptate exercitationem, ullam quaerat. Unde
-              deleniti libero possimus totam quisquam ipsum perferendis
-              laboriosam sit, doloribus itaque doloremque voluptate magnam cum,
-              eum incidunt placeat veniam minima asperiores? Ea reprehenderit
-              officia explicabo quas voluptatibus, inventore quasi blanditiis
-              quos, neque perferendis perspiciatis veniam ipsa nesciunt earum!"
+              body="EdgeLords was founded by two experienced developers that discovered a need for new and current entrepreneurs. We are a new business that promises to provide excellent customer service through human interaction."
             />
           </CardContent>
         </Card>
