@@ -74,16 +74,16 @@ const AccordionQA = ({ faq }) => {
         TransitionProps={transitionProps}
       >
         <AccordionSummary
-          expandIcon={<MdExpandMore color="white" />}
+          expandIcon={<MdExpandMore color="blue" />}
           aria-controls={`${faq.id}-content`}
           id={`${faq.id}-header`}
-          className={classes.summary}
+          className={`${classes.summary} bg-secondary text-primary`}
         >
           <div className={classes.question}>
-            <Typography className={classes.heading}>{faq.question}</Typography>
+            <Typography className={`${classes.heading} text-primary`}>{faq.question}</Typography>
           </div>
         </AccordionSummary>
-        <AccordionDetails className={classes.details}>
+        <AccordionDetails className={`${classes.details} bg-secondary text-black`}>
           <Typography>{faq.answer}</Typography>
         </AccordionDetails>
       </Accordion>

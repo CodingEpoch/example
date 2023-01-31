@@ -10,21 +10,16 @@ import BetterContact from "../../components/Contact/BetterContact/BetterContact"
 
 const members = [
   {
-    name: "Jane Smith",
+    name: "Ryan Painter",
     position: "Team Lead",
     bio: "Jane is a highly skilled team lead with over 10 years of experience in the industry.",
     image: "/images/members/member1.webp",
   },
   {
-    name: "John Doe",
+    name: "Edward Hart",
     position: "Developer",
     bio: "John is a talented developer with a passion for solving complex problems.",
     image: "/images/members/member3.webp",
-  },
-  {
-    name: "Jenna Williams",
-    position: "Designer",
-    bio: "Jenna is a creative and experienced designer with a keen eye for detail.",
   },
 ];
 
@@ -56,10 +51,8 @@ function AboutPage() {
         </div>
 
         <Divider variant="fullWidth" className={classes.divider} />
-        <div className="card-container-about">
-          <CareersOpportunities />
-        </div>
-        <div className="card-container-about">
+        
+        <div className="card-container-about bg-secondary">
           <BetterContact />
         </div>
         <Divider variant="fullWidth" className={classes.divider} />

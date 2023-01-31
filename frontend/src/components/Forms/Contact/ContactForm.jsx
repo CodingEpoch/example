@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 120,
     margin: theme.spacing(0.5),
     background: "#3f3f3f",
-    color: "white",
+    color: "black",
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
         borderColor: "white",
@@ -32,24 +32,24 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     "& input": {
-      color: "white",
+      color: "black",
     },
     "& .MuiFormLabel-root": {
-      color: "white",
+      color: "black",
       fontWeight: "700",
       fontSize: "0.9rem",
     },
     "& textarea": {
-      color: "white",
+      color: "black",
     },
   },
 
   field: {
     "& .MuiOutlinedInput-inputMultiline": {
-      color: "white",
+      color: "black",
     },
     "& .MuiOutlinedInput-input": {
-      color: "white",
+      color: "black",
       textAlign: "left",
     },
     "& .MuiOutlinedInput-root": {
@@ -64,26 +64,26 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     "& .MuiFormLabel-root": {
-      color: "white",
+      color: "black",
       fontWeight: "700",
       fontSize: "0.9rem",
     },
     "& input": {
-      color: "white",
+      color: "black",
     },
     marginBottom: 15,
   },
   label: {
-    color: "white",
+    color: "black",
   },
   select: {
     background: "#3f3f3f",
     color: "white",
     "& .MuiSelect-icon": {
-      color: "white",
+      color: "black",
     },
     "& .MuiOutlinedInput-input": {
-      color: "white",
+      color: "black",
     },
     "& .MuiSelect-select": {},
     "& .MuiSelect-select:focus": {
@@ -107,11 +107,13 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 140,
     boxShadow: theme.shadows[3],
     backgroundColor: "#1C1C1C",
+    transition: '.1s',
     color: theme.palette.primary.contrastText,
     "&:hover": {
       transform: "scale(1.02)",
       boxShadow: theme.shadows[7],
-      backgroundColor: theme.palette.action.hover,
+      backgroundColor: 'blue !important',
+      color: 'white !important'
     },
   },
   errorText: {
@@ -205,6 +207,7 @@ const ContactForm = (props) => {
               id="subject"
               name="subject"
               label="subject"
+              className="text-black bg-secondary"
               value={formData.subject}
               onChange={handleChange}
               MenuProps={{
@@ -236,7 +239,7 @@ const ContactForm = (props) => {
         <Grid item xs={12}>
           <TextField
             fullWidth
-            className={classes.field}
+            className={`${classes.field} text-black b-2-primary bg-secondary br-w-1`}
             id="name"
             name="name"
             label="Name"
@@ -250,7 +253,7 @@ const ContactForm = (props) => {
         <Grid item xs={12}>
           <TextField
             fullWidth
-            className={classes.field}
+            className={`${classes.field} text-black b-2-primary bg-secondary br-w-1`}
             id="email"
             name="email"
             label="Email"
@@ -264,7 +267,7 @@ const ContactForm = (props) => {
         <Grid item xs={12}>
           <TextField
             fullWidth
-            className={classes.field}
+            className={`${classes.field} text-black bg-secondary br-w-1`}
             id="phone"
             name="phone"
             label="Phone"
@@ -278,7 +281,7 @@ const ContactForm = (props) => {
         <Grid item xs={12}>
           <TextField
             fullWidth
-            className={classes.field}
+            className={`${classes.field} text-black b-2-primary bg-secondary br-w-2`}
             id="message"
             name="message"
             label="Message"
@@ -296,7 +299,7 @@ const ContactForm = (props) => {
           xs={12}
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <Button type="submit" variant="contained" className={classes.button}>
+          <Button type="submit" variant="contained" className={`${classes.button} bg-secondary text-primary`}>
             Submit
           </Button>
         </Grid>

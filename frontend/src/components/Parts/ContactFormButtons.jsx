@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ContactButtons() {
+function ContactFormButtons() {
   const classes = useStyles();
 
   return (
@@ -54,4 +54,4 @@ function ContactButtons() {
 }
 
 
-export default ContactButtons;
+export default ContactFormButtons;

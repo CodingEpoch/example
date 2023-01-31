@@ -18,14 +18,15 @@ const useStyles = makeStyles((theme) => ({
     color: "#f9f9f9",
     fontWeight: "700",
     fontFamily: "Poppins",
-    paddingBottom: 5,
+    paddingBottom: 15,
+    marginTop: 10
   },
   containergrid: {
     display: "flex",
     width: "100%",
   },
   tab: {
-    backgroundColor: "#212121",
+    backgroundColor: "blue",
     width: "20%",
     color: "#f9f9f9",
     fontWeight: "700",
@@ -42,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   tabsIndicator: {
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "white",
   },
 }));
 
@@ -61,14 +62,14 @@ const FAQAccordion = () => {
         container
         spacing={2}
         justifyContent="center"
-        className={classes.containergrid}
+        className={`${classes.containergrid} bg-secondary`}
       >
         <Grid item xs={12}>
-          <Typography variant="h4" className={classes.title}>
+          <Typography variant="h4" className={`${classes.title} text-primary`}>
             Frequently Asked Questions
           </Typography>
         </Grid>
-        <Paper elevation={6} className={classes.root}>
+        <Paper elevation={6} className={`${classes.root} bg-primary`}>
           <Tabs
             value={currentCategory}
             onChange={handleTabChange}
@@ -78,7 +79,7 @@ const FAQAccordion = () => {
               <Tab
                 label={category}
                 value={category}
-                classes={{ root: classes.tab }}
+                classes={{ root: `${classes.tab} bg-secondary text-primary`  }}
               />
             ))}
           </Tabs>

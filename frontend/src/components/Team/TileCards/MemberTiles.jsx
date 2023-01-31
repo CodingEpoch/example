@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#242424",
+    backgroundColor: "white",
     padding: 40,
   },
   card: {
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     margin: theme.spacing(1.5),
     boxShadow: theme.shadows[7],
-    backgroundColor: "#202020",
+    backgroundColor: "white",
     "&:hover": {
       transform: "scale(1.02)",
       boxShadow: theme.shadows[14],
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: 92,
     marginLeft: theme.spacing(3),
     backgroundColor: deepPurple[500],
-    color: theme.palette.common.white,
+    color: 'black',
     "&:hover": {
       transform: "scale(1.05)",
     },
@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 800,
     marginBottom: theme.spacing(1),
     fontFamily: "Poppins",
-    color: "#f9f9f9",
+    color: "black",
     fontSize: "1.5rem",
     "&:hover": {
       transform: "scale(1.02)",
@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   position: {
-    color: "#f9f9f9",
+    color: "black",
     fontWeight: 450,
     fontSize: "1rem",
     marginBottom: theme.spacing(1),
@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   bio: {
-    color: "#f9f9f9",
+    color: "black",
     marginTop: theme.spacing(1),
     fontSize: "0.9rem",
     fontWeight: 450,
@@ -105,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     textAlign: "center",
-    color: "#f9f9f9",
+    color: "white",
     fontWeight: "700",
     fontFamily: "Poppins",
   },
@@ -124,9 +124,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
-    backgroundColor: "#242424",
-    boxShadow: theme.spacing(6),
   },
+  hr: {
+    width: '75%'
+  }
 }));
 
 function MemberTiles({ name, position, bio, image }) {
@@ -172,7 +173,7 @@ export default function TeamMembers({ members }) {
 
   return (
     <div className={classes.root}>
-      <Paper elevation={9} className={classes.paper}>
+      <Paper elevation={9} className={`${classes.paper} bg-primary`}>
         <Grid container spacing={0} justifyContent="center">
           <Grid item xs={12} key="title">
             <Typography variant="h4" className={classes.title}>
