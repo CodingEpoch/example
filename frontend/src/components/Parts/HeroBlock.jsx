@@ -61,9 +61,9 @@ const useStyles = makeStyles((theme) => ({
   btnCta: {
     minWidth: 140,
     boxShadow: theme.shadows[3],
-    backgroundColor: "blue",
     padding: 10,
     transition: '.3s',
+    backgroundColor: 'blue',
     color: theme.palette.primary.contrastText,
     "&:hover": {
       transform: "scale(1.02)",
@@ -108,7 +108,7 @@ const HeroBlock = ({
             to={btnLink}
             color="primary"
             variant="contained"
-            className={classes.btnCta}
+            className={`${classes.btnCta}`}
           >
             {btnText}
           </CustomButton>

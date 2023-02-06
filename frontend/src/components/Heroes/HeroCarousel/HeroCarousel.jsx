@@ -9,7 +9,6 @@ import SocialSection from "../../Parts/SocialSection";
 const useStyles = makeStyles((theme) => ({
   root: {
     fontFamily: "Poppins",
-    backgroundColor: "white",
     paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(2),
     position: "relative",
@@ -46,7 +45,7 @@ export default function HeroCarousel({ items }) {
   const classes = useStyles();
 
   return (
-    <Box className={classes.root}>
+    <Box className={`${classes.root} bg-white`}>
       <Container style={{ maxWidth: "95%" }} className={classes.gridContainer}>
         <Grid container className={classes.grid}>
           <Slide in={true} direction="right" timeout={1000}>

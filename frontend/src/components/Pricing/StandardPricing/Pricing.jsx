@@ -8,20 +8,14 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "white",
   },
   title: {
-    color: "blue",
     fontSize: "2.25rem",
     textAlign: "center",
     marginTop: "50px",
-    letterSpacing: "1.2px",
   },
   hr: {
-    backgroundColor: "blue",
-    color: "blue",
     width: "75%",
-    border: ".75px solid blue",
   },
 }));
 
@@ -113,12 +107,12 @@ export default function PricingOverview() {
 
   return (
     <>
-      <hr className={classes.hr} />
+      <hr className={`${classes.hr} bg-primary b-1-primary`} />
 
-      <h2 className={classes.title}>Pricing Tiers</h2>
+      <h2 className={`${classes.title} text-primary ls-2`}>Pricing Tiers</h2>
 
       <Slide in={true} direction="up" timeout={1000}>
-        <div className={classes.pricingContainer}>
+        <div className={`${classes.pricingContainer} bg-secondary`}>
           {pricingData.map((plan, index) => (
             <PricingCard pricingData={pricingData} plan={plan} index={index} />
           ))}

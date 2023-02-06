@@ -14,8 +14,6 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "white",
-    color: "blue",
     [theme.breakpoints.down("1100")]: {
       flexDirection: "column",
     },
@@ -30,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
     minWidth: 345,
     margin: 10,
-    backgroundColor: "blue",
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {},
   },
@@ -39,10 +36,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    backgroundColor: "blue",
     padding: 10,
-    color: "#fafafa",
   },
+  hr: {
+    width: '75%'
+  }
 }));
 
 export default function LatestNews() {
@@ -69,8 +67,8 @@ export default function LatestNews() {
       <Grid container spacing={3}>
         {[0, 1, 2].map((article) => (
           <Grid item key={article} xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
-              <CardContent className={classes.cardContent}>
+            <Card className={`${classes.card} bg-primary`}>
+              <CardContent className={`${classes.cardContent} bg-primary`}>
                 <h1>Loading</h1>
               </CardContent>
             </Card>
@@ -89,7 +87,9 @@ export default function LatestNews() {
   }
 
   return (
-    <Grid container spacing={0} className={classes.root}>
+    <>
+    <hr className={`b-1-primary ${classes.hr}`}/>
+    <Grid container spacing={0} className={`${classes.root} bg-secondary`}>
       <Grid item xs={12}>
         <TitleBlock
           subtitle="In the Knows"
@@ -111,5 +111,6 @@ export default function LatestNews() {
         </Grid>
       ))}
     </Grid>
+    </>
   );
 }
