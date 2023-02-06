@@ -4,8 +4,6 @@ import Paper from "@material-ui/core/Paper";
 import features from "./features-data";
 import { Slide } from "@material-ui/core";
 import "./Features.css";
-<<<<<<< HEAD:frontend/src/components/Features/FeatureTiles/FeatureTiles.jsx
-import { SlideOnScroll } from "../../Animations/IntoView/Slide/SlideViewPort";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
@@ -19,9 +17,7 @@ const useStyles = makeStyles(theme => ({
   }
 
 }))
-=======
 import { SlideOnScroll } from "../../../Animations/IntoView/Slide/SlideViewPort";
->>>>>>> 39eeb5fee5bc3bdda808d641a005827db51aece5:frontend/src/components/Features/Content/FeatureTiles/FeatureTiles.jsx
 
 export default function FeatureTiles() {
 

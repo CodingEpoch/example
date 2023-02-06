@@ -39,15 +39,9 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     fontFamily: "Poppins",
-<<<<<<< HEAD:frontend/src/components/Parts/HeroBlock.jsx
-    fontSize: "1.25rem",
-    color: 'black',
-    paddingBottom: 10,
-=======
     fontSize: "1rem",
     color: theme.palette.grey[400],
     paddingBottom: 40,
->>>>>>> 39eeb5fee5bc3bdda808d641a005827db51aece5:frontend/src/components/Elements/TextBlocks/HeroBlock/HeroBlock.jsx
     paddingTop: 10,
     [theme.breakpoints.down("md")]: {
       fontSize: "1rem",

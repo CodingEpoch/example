@@ -10,11 +10,8 @@ import FeatureDemo from "./pages/Demos/FeaturesDemo";
 import DrawerBased from "./navigation/Components/DrawerBased/DrawerBased";
 import FormDemo from "./pages/Demos/FormDemos";
 import PartsDemo from "./pages/Demos/PartDemos";
-<<<<<<< HEAD
-import TestEd1 from "./pages/TestEd/TestEd1";
 import ContactPage from "./pages/Contact/ContactPage";
 import ArticlePage from "./pages/Article/ArticlePage";
-=======
 import SupportPage from "./pages/Support/SupportPage";
 import IndividualArticleView from "./pages/Articles/IndividualArticleView";
 import ArticleList from "./pages/Articles/ArticleList";
@@ -42,7 +39,6 @@ import UpdateArticleView from "./pages/Articles/UpdateArticleView";
   */
 }
 
->>>>>>> 39eeb5fee5bc3bdda808d641a005827db51aece5
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -64,19 +60,6 @@ function App() {
           <Route path="/services" element={<TestPage />} />
           <Route path="/contact" element={<AboutPage />} />
 
-<<<<<<< HEAD
-        <Route path="/services" element={<TestPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path='/articles' element={<ArticlePage />}></Route>
-        <Route path="/heroes" element={<HeroDemo />} />
-        <Route path="/features" element={<FeatureDemo />} />
-        <Route path="/forms" element={<FormDemo />} />
-        <Route path="/parts" element={<PartsDemo />} />
-        <Route path='/tested1' element={<TestEd1 />} />
-      </Routes>
-      <MuiFooter />
-    </Router>
-=======
           {/* Demo Routes */}
           <Route path="/heroes" element={<HeroDemo />} />
           <Route path="/features" element={<FeatureDemo />} />
@@ -91,7 +74,6 @@ function App() {
         <Footer />
       </Router>
     </ThemeProvider>
->>>>>>> 39eeb5fee5bc3bdda808d641a005827db51aece5
   );
 }
 

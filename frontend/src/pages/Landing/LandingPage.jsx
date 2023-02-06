@@ -99,12 +99,9 @@ function LandingPage() {
       <div className="">
         <FeatureTiles />
       </div>
-<<<<<<< HEAD
-=======
       <div className="car-container">
         <BetterTestimonials />
       </div>
->>>>>>> 39eeb5fee5bc3bdda808d641a005827db51aece5
       <div className="">
         <LatestNews />
       </div>

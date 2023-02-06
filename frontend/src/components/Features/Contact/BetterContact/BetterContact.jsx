@@ -1,20 +1,12 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Paper, Typography } from "@material-ui/core";
-<<<<<<< HEAD:frontend/src/components/Contact/BetterContact/BetterContact.jsx
-import ContactForm from "../../Forms/Contact/ContactForm";
-import SocialSectionForm from "../../Parts/SocialSectionForm";
-import ContactSection from "./ContactSection";
-import HoursSection from "./HoursSection";
-import ContactFormButtons from "../../Parts/ContactFormButtons";
-=======
 import ContactSection from "./ContactSection";
 import HoursSection from "./HoursSection";
 import ContactButtons from "../../../Elements/Buttons/ContactButtons";
 import SocialSection from "../../../Elements/Buttons/SocialButtons";
 import ContactForm from "../../../Forms/Contact/ContactForm";
 
->>>>>>> 39eeb5fee5bc3bdda808d641a005827db51aece5:frontend/src/components/Features/Contact/BetterContact/BetterContact.jsx
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,

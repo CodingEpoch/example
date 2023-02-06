@@ -1,4 +1,4 @@
-import BetterContact from "../../components/Contact/BetterContact/BetterContact";
+import BetterContact from "../../components/Features/Contact/BetterContact/BetterContact";
 import { makeStyles } from "@material-ui/core";
 
 

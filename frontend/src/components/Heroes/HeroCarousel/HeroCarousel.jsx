@@ -13,10 +13,7 @@ import HeroBlockEdit from "../../Elements/TextBlocks/HeroBlock/HeroBlockEdit";
 const useStyles = makeStyles((theme) => ({
   root: {
     fontFamily: "Poppins",
-<<<<<<< HEAD
-=======
     backgroundColor: theme.palette.background.default,
->>>>>>> 39eeb5fee5bc3bdda808d641a005827db51aece5
     paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(2),
     position: "relative",
@@ -86,18 +83,6 @@ export default function HeroCarousel({ items }) {
       <Container style={{ maxWidth: "95%" }} className={classes.gridContainer}>
         <Grid container className={classes.grid}>
           <Slide in={true} direction="right" timeout={1000}>
-<<<<<<< HEAD
-            <Grid item xs={12} md={12} className={classes.gridItemLeft}>
-              <HeroBlock
-                title="Custom Designs"
-                heading="Modern Framework, <br /> Design, and Hosting"
-                text='Backed by years of experience and knowledge in the industry, EdgeLords aims to provide new and current entrepreneurs with a premium framework, excellent hosting, custom design, and human customer service in order to establish their brand successfully.'
-                btnText="Get Started"
-                btnLink="/about"
-                className={classes.heroBlock}
-              />
-
-=======
             <Grid item xs={12} md={6} className={classes.gridItemLeft}>
               {!editing ? (
                 <HeroBlock
@@ -116,7 +101,6 @@ export default function HeroCarousel({ items }) {
               <Button onClick={() => setEditing(!editing)}>
                 {editing ? "Cancel" : "Edit"}
               </Button>
->>>>>>> 39eeb5fee5bc3bdda808d641a005827db51aece5
               <Grid item xs={12} md={12} className={classes.contactContainer}>
                 <ContactButtons />
                 <SocialSection />
