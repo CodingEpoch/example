@@ -28,12 +28,9 @@ const useStyles = makeStyles((theme) => ({
     padding: 40,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "whtie",
   },
   container: {
     maxWidth: "600px",
-    backgroundColor: "blue",
-    color: "white",
     boxShadow: theme.shadows[10],
     borderRadius: '7px',
     padding: theme.spacing(6),
@@ -57,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
     width: '65%',
-    border: '2px solid blue',
     margin: theme.spacing(1),
     "& .MuiOutlinedInput-root": {
       "&.Mui-focused fieldset": {
@@ -108,8 +104,8 @@ export default function NewsletterForm() {
   const [error, setError] = useState(false);
 
   return (
-    <Box className={classes.root}>
-      <Container className={classes.container}>
+    <Box className={`${classes.root} bg-secondary`}>
+      <Container className={`${classes.container} text-secondary bg-primary`}>
         <Typography variant="h2" className={classes.heading}>
           Subscribe to our Newsletter
         </Typography>
