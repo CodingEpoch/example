@@ -1,14 +1,22 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Container, Box, Slide } from "@material-ui/core";
+import { Grid, Container, Box, Slide, Button } from "@material-ui/core";
 import { SlideOnScroll } from "../../Animations/IntoView/Slide/SlideViewPort";
-import HeroBlock from "../../Parts/HeroBlock";
-import CarouselX from "../../Carousels/ImgCarousel/ImgCarousel";
-import ContactButtons from "../../Parts/ContactButtons";
-import SocialSection from "../../Parts/SocialSection";
+import HeroBlock from "../../Elements/TextBlocks/HeroBlock/HeroBlock";
+import CarouselX from "../../Images/Carousel/ImageCarousel";
+import ContactButtons from "../../Elements/Buttons/ContactButtons";
+import SocialSection from "../../Elements/Buttons/SocialButtons";
+import { useEffect } from "react";
+import axiosInstance from "../../../lib/Axios/axiosInstance";
+import { useState } from "react";
+import HeroBlockEdit from "../../Elements/TextBlocks/HeroBlock/HeroBlockEdit";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     fontFamily: "Poppins",
+<<<<<<< HEAD
+=======
+    backgroundColor: theme.palette.background.default,
+>>>>>>> 39eeb5fee5bc3bdda808d641a005827db51aece5
     paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(2),
     position: "relative",
@@ -43,12 +51,42 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HeroCarousel({ items }) {
   const classes = useStyles();
+  const [editing, setEditing] = useState(false);
+  const [heroblock, setHeroblock] = useState({});
+  const [data, setData] = useState({
+    title: "",
+    heading: "",
+    text: "",
+    buttonText: "",
+  });
+
+  const updateHeroBlock = (updatedHeroBlock) => {
+    setHeroblock(updatedHeroBlock);
+    setData(updatedHeroBlock);
+    setEditing(false);
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      axiosInstance
+        .get("/heroblock/")
+        .then((response) => {
+          setData(response.data);
+          console.log(data);
+        })
+        .catch((err) => {
+          setError(err);
+        });
+    };
+    fetchData();
+  }, []);
 
   return (
     <Box className={`${classes.root} bg-white`}>
       <Container style={{ maxWidth: "95%" }} className={classes.gridContainer}>
         <Grid container className={classes.grid}>
           <Slide in={true} direction="right" timeout={1000}>
+<<<<<<< HEAD
             <Grid item xs={12} md={12} className={classes.gridItemLeft}>
               <HeroBlock
                 title="Custom Designs"
@@ -59,6 +97,26 @@ export default function HeroCarousel({ items }) {
                 className={classes.heroBlock}
               />
 
+=======
+            <Grid item xs={12} md={6} className={classes.gridItemLeft}>
+              {!editing ? (
+                <HeroBlock
+                  title={data.title}
+                  heading={data.heading}
+                  text={data.text}
+                  btnText={data.buttonText}
+                  btnLink="/about"
+                />
+              ) : (
+                <HeroBlockEdit
+                  heroblock={data}
+                  updateHeroBlock={updateHeroBlock}
+                />
+              )}
+              <Button onClick={() => setEditing(!editing)}>
+                {editing ? "Cancel" : "Edit"}
+              </Button>
+>>>>>>> 39eeb5fee5bc3bdda808d641a005827db51aece5
               <Grid item xs={12} md={12} className={classes.contactContainer}>
                 <ContactButtons />
                 <SocialSection />

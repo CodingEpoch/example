@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     padding: 20,
     backgroundColor: "#242424",
+    borderRadius: 14,
   },
   icon: {
     margin: theme.spacing(1),
@@ -113,7 +114,7 @@ const RegisterForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("/api/register", formData)
+      .post("http://127.0.0.1:8000/api/register/", formData)
       .then((res) => {
         console.log(res);
       })

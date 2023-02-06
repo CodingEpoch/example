@@ -4,41 +4,124 @@ import DesignIcon from "@material-ui/icons/Brush";
 import DevelopIcon from "@material-ui/icons/Code";
 import HostingIcon from "@material-ui/icons/Public";
 import LaunchIcon from "@material-ui/icons/Launch";
-import ContactButtons from "../../components/Parts/ContactButtons";
-import ContentBlock from "../../components/Parts/ContentBlock";
-import CoreValues from "../../components/Parts/CoreValues";
-import FloatingFeature from "../../components/Parts/FloatingFeature";
-import HeroBlock from "../../components/Parts/HeroBlock";
-import SocialSection from "../../components/Parts/SocialSection";
-import TitleBlock from "../../components/Parts/TitleBlock";
 import Demo from "./Demo";
-import AccordionQA from "../../components/Parts/AccordionQA";
-import TestimonialCard from "../../components/Parts/TestimonialCard";
-import TeamGrid from "../../components/Team/_SquareCards/SquareCards";
-import PricingTier from "../../components/Pricing/_MinimalPricing/MinimalPricing";
-import AdvancedSnackbar from "../../components/Parts/Snackbar";
-import ComplexFooter from "../../components/Footer/_ComplexFooter/ComplexFooter";
+import ContactButtons from "../../components/Elements/Buttons/ContactButtons";
+import SocialSection from "../../components/Elements/Buttons/SocialButtons";
+import FloatingFeature from "../../components/Features/Content/FloatingFeature";
+import CoreValues from "../../components/Features/Business/CompanyInfo/CoreValues";
+import AdvancedSnackbar from "../../components/Elements/Snackbars/Snackbar";
+import ContentBlock from "../../components/Elements/TextBlocks/ContentBlock";
+import TitleBlock from "../../components/Elements/TextBlocks/TitleBlock";
+import AccordionQA from "../../components/Features/Accordions/AccordionQA";
+import TestimonialCard from "../../components/Features/Testimonials/TestimonialCard";
+import ComplexFooter from "../../navigation/Components/Footer/_ComplexFooter/ComplexFooter";
+import ImageGallery from "../../components/Images/Gallery/ImageGallery";
+import { useState } from "react";
+import HeroBlock from "../../components/Elements/TextBlocks/HeroBlock/HeroBlock";
 
-const members = [
+// {
+//     component: TeamCard,
+//     title: "TeamCard",
+//     props: {
+//       image: "images/members/member1.webp",
+//       name: "John Doe",
+//       position: "CEO",
+//       socials: [
+//         {
+//           platform: "LinkedIn",
+//           link: "https://www.linkedin.com/in/johndoe",
+//         },
+//         {
+//           platform: "Twitter",
+//           link: "https://twitter.com/johndoe",
+//         },
+//       ],
+//       skills: [
+//         {
+//           skill: "Node.js",
+//         },
+//         {
+//           skill: "React",
+//         },
+//         {
+//           skill: "JavaScript",
+//         },
+//       ],
+//     },
+//   },
+
+const testimonials = [
   {
     name: "John Doe",
-    position: "CEO",
-    image: "images/members/member2.webp",
-    profile: "https://example.com/john-doe",
-    skills: ["Leadership", "Strategy", "Business Development"],
-    linkedin: "https://linkedin.com/john-doe",
-    twitter: "https://twitter.com/johndoe",
+    company: "Acme Inc.",
+    review:
+      "I have been extremely satisfied with the services provided by this company. They exceeded my expectations.",
+    avatar: "https://i.pravatar.cc/150?img=1",
+  },
+  {
+    name: "Jane Smith",
+    company: "XYZ Corp.",
+    review:
+      "The team at this company was professional and efficient. I would recommend them to anyone.",
+    avatar: "https://i.pravatar.cc/150?img=2",
+  },
+  {
+    name: "Bob Johnson",
+    company: "ABC LLC.",
+    review:
+      "I was impressed with the level of expertise and attention to detail demonstrated by the team.",
+    avatar: "https://i.pravatar.cc/150?img=3",
+  },
+];
+
+const images2 = [
+  {
+    id: 1,
+    url: "images/masonry/img1.jpg",
+    title: "Image 1",
+    description: "Titters cuck cuck cuck cuck cuck cuck cuck cuck Titters",
+  },
+  {
+    id: 2,
+    url: "images/masonry/img2.jpg",
+    title: "Image 2",
+    description: "Titters",
+  },
+  {
+    id: 3,
+    url: "images/masonry/img3.jpg",
+    title: "Image 3",
+    description: "Titters",
+  },
+  {
+    id: 4,
+    url: "images/masonry/img4.jpeg",
+    title: "Image 4",
+    description: "Titters",
+  },
+  {
+    id: 5,
+    url: "images/masonry/img5.jpeg",
+    title: "Image 5",
+    description: "Titters",
+  },
+  {
+    id: 6,
+    url: "images/masonry/img6.jpeg",
+    title: "Image 6",
+    description: "Titters",
   },
 ];
 
 const formComponents = [
   {
-    component: ComplexFooter,
-    title: "ComplexFooter",
+    component: ImageGallery,
+    title: "ImageGallery",
+    props: { images: images2 },
   },
   {
-    component: PricingTier,
-    title: "PricingTier",
+    component: ComplexFooter,
+    title: "ComplexFooter",
   },
   {
     component: TestimonialCard,
@@ -124,26 +207,9 @@ const formComponents = [
     component: AdvancedSnackbar,
     title: "AdvancedSnackbar",
     props: {
+      open: true,
       message: "This is a success message",
       type: "success",
-      position: "top-right",
-    },
-  },
-  {
-    component: AdvancedSnackbar,
-    title: "AdvancedSnackbar",
-    props: {
-      message: "This is an error message",
-      type: "error",
-      position: "bottom-right",
-    },
-  },
-  {
-    component: AdvancedSnackbar,
-    title: "AdvancedSnackbar",
-    props: {
-      message: "This is an warning message",
-      type: "warning",
       position: "bottom-left",
     },
   },
@@ -151,9 +217,21 @@ const formComponents = [
     component: AdvancedSnackbar,
     title: "AdvancedSnackbar",
     props: {
+      open: true,
+      message: "This is an error message",
+      type: "error",
+      position: "bottom-right",
+    },
+  },
+
+  {
+    component: AdvancedSnackbar,
+    title: "AdvancedSnackbar",
+    props: {
+      open: true,
       message: "This is an info message",
       type: "info",
-      position: "top-left",
+      position: "bottom-center",
     },
   },
 ];
