@@ -25,6 +25,7 @@ import AdminRoute from "./navigation/Routes/AdminRoute";
 import withAuth from "./lib/Auth/withAuth/withAuth";
 import ProfileForm from "./components/Forms/Profile/Profile";
 import UpdateArticleView from "./pages/Articles/UpdateArticleView";
+import LandingPage1 from "./pages/Landing/LandingPage1";
 {
   /* 
     Private Route Example:
@@ -54,6 +55,7 @@ function App() {
 
           {/* Page Routes */}
           <Route path="/" element={<LandingPage />} />
+          <Route path="/landingpage1" element={<LandingPage1 />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/test" element={<TestPage />} />
           <Route path="/ticket" element={<SupportPage />} />

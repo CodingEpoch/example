@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
     boxShadow: theme.shadows[3],
     padding: theme.spacing(2),
     borderRadius: 14,
@@ -60,6 +60,9 @@ const useStyles = makeStyles((theme) => ({
   testimonialAvatar: {
     fontFamily: "Poppins",
     color: "white",
+    display: "flex",
+    margin: "auto",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     marginTop: theme.spacing(2),
@@ -75,6 +78,7 @@ const useStyles = makeStyles((theme) => ({
   testimonialAvatarName: {
     fontFamily: "Poppins",
     fontWeight: 600,
+    textAlign: "center",
     fontSize: "0.85rem",
     "&:hover": {
       transform: "scale(1.05)",
@@ -109,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
     textAlign: "center",
     color: "blue",
-    letterSpacing: '1.2px',
+    letterSpacing: "1.2px",
     fontSize: "1.3rem",
   },
   speechBubblesText: {
@@ -123,6 +127,17 @@ const useStyles = makeStyles((theme) => ({
       width: 80,
       height: 80,
     },
+  },
+  avatarContainer: {
+    width: "40%",
+    display: "flex",
+    margin: "auto",
+  },
+  textContainer: {
+    width: "80%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
 }));
 
@@ -170,7 +185,7 @@ const TestimonialAvatar = ({ src, name, title }) => {
   );
 };
 
-export default function BetterTestimonials() {
+export default function BetterTestimonials2() {
   const classes = useStyles();
   return (
     <Box className={classes.speechBubbles}>
@@ -199,17 +214,21 @@ export default function BetterTestimonials() {
                 <Grid direction="row">
                   <Testimonial className={`bg-primary`}>
                     <TestimonialContent className={`bg-primary`}>
-                      <TestimonialHeading>
-                        {testimonial.heading}
-                      </TestimonialHeading>
-                      <TestimonialAvatar
-                      src={testimonial.avatar.src}
-                      name={testimonial.avatar.name}
-                      title={testimonial.avatar.title}
-                    />
-                      <TestimonialText>{testimonial.text}</TestimonialText>
+                      <div className={classes.textContainer}>
+                        <TestimonialHeading>
+                          {testimonial.heading}
+                        </TestimonialHeading>
+
+                        <TestimonialText>{testimonial.text}</TestimonialText>
+                      </div>
+                      <div className={classes.avatarContainer}>
+                        <TestimonialAvatar
+                          src={testimonial.avatar.src}
+                          name={testimonial.avatar.name}
+                          title={testimonial.avatar.title}
+                        />
+                      </div>
                     </TestimonialContent>
-                    
                   </Testimonial>
                 </Grid>
               </SlideOnScroll>

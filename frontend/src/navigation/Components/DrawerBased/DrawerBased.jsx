@@ -17,6 +17,7 @@ import ExpandMore from "@material-ui/icons/ExpandMore";
 import Collapse from "@material-ui/core/Collapse";
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
+import LandingPage1 from "../../../pages/Landing/LandingPage1";
 import {
   FaAddressCard,
   FaBell,
@@ -198,6 +199,11 @@ const items = [
     name: "Support",
     icon: <MdContactSupport size={22} />,
     link: "/ticket",
+  },
+  {
+    name: 'LandingPage1',
+    icon: <MdContactSupport size={22} />,
+    link: '/landingpage1'
   },
   {
     name: "Demos",

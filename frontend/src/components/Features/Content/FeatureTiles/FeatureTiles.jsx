@@ -14,6 +14,11 @@ const useStyles = makeStyles(theme => ({
   },
   hr: {
     width: '75%',
+  },
+  featuresContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    margin: 'auto'
   }
 
 }))
@@ -41,7 +46,7 @@ export default function FeatureTiles() {
               justifyContent="center"
             >
               <SlideOnScroll direction="down">
-                <div className="testing">
+                <div className={`${classes.featuresContainer}`}>
                   <Paper className="feature-paper tile-bg">
                     <div className="feature">
                       <div className="feature-icon">
