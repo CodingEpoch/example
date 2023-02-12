@@ -40,13 +40,14 @@ const useStyles = makeStyles((theme) => ({
   gridcontainer: {
     justifyContent: "center !important",
     display: "flex",
+    margin: 'auto',
     flexDirection: "row",
-    width: "100%",
+    width: "70%",
     marginBottom: 30,
   },
   avatar: {
     backgroundColor: "blue",
-    color: "theme.palette.primary.contrastText",
+    color: "white",
   },
 }));
 

@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: "bold",
     color: "blue",
-    textAlign: "left !important",
+    textAlign: "left",
     borderBottom: "1px solid white !important",
     marginBottom: "10px !important",
     paddingBottom: "2px !important",
@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     marginTop: 15,
     marginBottom: 30,
+    textAlign: 'right'
   },
   container: {
     width: '70%',
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ContentBlock({ title, body }) {
+export default function ContentBlock({ title, body, textClass }) {
   const classes = useStyles();
 
   return (
@@ -33,7 +34,7 @@ export default function ContentBlock({ title, body }) {
       <Typography variant="h5" className={classes.title}>
         {title}
       </Typography>
-      <Typography variant="body1" className={classes.body}>
+      <Typography variant="body1" className={textClass}>
         {body}
       </Typography>
     </div>

@@ -26,6 +26,7 @@ import withAuth from "./lib/Auth/withAuth/withAuth";
 import ProfileForm from "./components/Forms/Profile/Profile";
 import UpdateArticleView from "./pages/Articles/UpdateArticleView";
 import LandingPage1 from "./pages/Landing/LandingPage1";
+import AboutPage1 from "./pages/About/AboutPage1";
 {
   /* 
     Private Route Example:
@@ -57,6 +58,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/landingpage1" element={<LandingPage1 />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path='/aboutpage1' element={<AboutPage1 />}/>
           <Route path="/test" element={<TestPage />} />
           <Route path="/ticket" element={<SupportPage />} />
           <Route path="/services" element={<TestPage />} />
